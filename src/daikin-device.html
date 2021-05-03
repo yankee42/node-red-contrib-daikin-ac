@@ -1,0 +1,23 @@
+<script type="text/javascript">
+    RED.nodes.registerType('daikin-device',{
+        category: 'config',
+        defaults: {
+            host: {value: '', required: true},
+            useGetToPost: {value: false, required: true}
+        },
+        label: function() {
+            return this.host;
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="daikin-device">
+    <div class="form-row">
+        <label for="node-config-input-host"><i class="fa fa-bookmark"></i> Host</label>
+        <input type="text" id="node-config-input-host">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-useGetToPost"><i class="fa fa-globe"></i> UseGetToPost</label>
+        <input type="checkbox" id="node-config-input-useGetToPost">
+    </div>
+</script>

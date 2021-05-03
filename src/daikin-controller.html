@@ -1,0 +1,54 @@
+<script type="text/javascript">
+    RED.nodes.registerType('daikin-controller',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value: ''},
+            device: {value: '', type: 'daikin-device', required: true},
+            function: {value: ''}
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function() {
+            return this.name || 'daikin-controller';
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="daikin-controller">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-device"><i class="fa fa-globe"></i> Device</label>
+        <input type="text" id="node-input-device" placeholder="Device">
+    </div>
+    <div class="form-row">
+        <label for="node-input-function"><i class="fa fa-tasks"></i> Function</label>
+        <select id="node-input-function">
+            <option value="">Use msg.topic</option>
+            <option>setUpdate</option>
+            <option>updateData</option>
+            <option>stopUpdate</option>
+            <option>getCommonBasicInfo</option>
+            <option>getCommonRemoteMethod</option>
+            <option>getACControlInfo</option>
+            <option>setACControlInfo</option>
+            <option>getACSensorInfo</option>
+            <option>getACModelInfo</option>
+            <option>getACWeekPower</option>
+            <option>getACYearPower</option>
+            <option>getACWeekPowerExtended</option>
+            <option>getACYearPowerExtended</option>
+            <option>setACSpecialMode</option>
+            <option>enableAdapterLED</option>
+            <option>disableAdapterLED</option>
+            <option>rebootAdapter</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="daikin-controller">
+    <p>Control a Daikin A/C</p>
+</script>
