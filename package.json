@@ -1,6 +1,6 @@
 {
     "name": "node-red-contrib-daikin-ac",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Nodes for controlling Daikin A/C",
     "scripts": {
         "build": "npm run build-ts && npm run copy-static-assets",
@@ -25,7 +25,7 @@
         }
     },
     "dependencies": {
-        "daikin-controller": "^1.2.0"
+        "daikin-controller": "^1.2.1"
     },
     "devDependencies": {
         "@types/node-red": "^1.1.1",
